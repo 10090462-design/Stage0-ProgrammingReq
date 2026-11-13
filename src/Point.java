@@ -10,17 +10,32 @@
 // Lastly, below the definitions of the `x` and `y` fields, define a static final
 // field `ORIGIN`, of type `Point`, and assign to it a new `Point` instance
 // with x = 0 and y = 0.
-
-
+public static class Point {
+    private final double x;
+    private final double y;
+    public static final Point ORIGIN = new Point(0,0);
+public Point(double x, double y) {
+    this.x = x;
+    this.y = y;
+}
+public double getX(){
+    return this.x;
+}
+public double getY(){
+    return this.y;
+}
+}
 void main() {
     // Create two `Point` objects: one representing the point (2, 5) and stored
     // in the variable `pointOne`, and the other representing the point (3, 0)
     // and stored in the variable `pointTwo`.
-
+Point pointOne = new Point(2,5);
+Point pointTwo = new Point(3,0);
 
     // On two separate lines, print the x-coordinate of pointOne,
     // and the y-coordinate of pointTwo, using the `Point` class's getter functions.
-
+System.out.println(pointOne.getX());
+System.out.println(pointTwo.getY());
     // Using the same getter functions and conditional statements,
     // print "Point one is farther right!" if `pointOne`'s x-coordinate is larger,
     // and "Point two is farther right!" if `pointTwo`'s x-coordinate is larger.
